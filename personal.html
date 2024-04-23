@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Details</title>
+</head>
+
+<body>
+    <div class="form-tabs">
+        <div class="container-1">
+            <div class="row">
+                <a href="index.html" style="padding: 10px 2px;">
+                    <div class="tab">
+                        <h3>Registration</h3>
+                        <span><i class="ri-arrow-right-wide-line"></i></span>
+                    </div>
+                </a>
+                <a href="personal.html">
+                    <div class="tab active">
+                        <h3>Personal Details</h3>
+                        <span><i class="ri-arrow-right-wide-line"></i></span>
+                    </div>
+                </a>
+                <a href="qualification.html">
+                    <div class="tab">
+                        <h3>Qualification</h3>
+                        <span><i class="ri-arrow-right-wide-line"></i></span>
+                    </div>
+                </a>
+                <a href="upload.html">
+                    <div class="tab">
+                        <h3>Upload Documents</h3>
+                        <span><i class="ri-arrow-right-wide-line"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="form-box">
+        <div class="container">
+            <form action="qualification.html" id="signup" class="form" onsubmit="return validateForm()">
+                <h1>Personal Details</h1>
+                <div class="form-field" id="form-field">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" name="fullname" id="fullname">
+                    <small></small>
+                </div>
+                <div class="form-field">
+                    <label for="Father">Father's Name:</label>
+                    <input type="text" name="Father" id="father" autocomplete="off">
+                    <small></small><br>
+                </div>
+                <div class="form-field">
+                    <label for="mother">Mother's Name:</label>
+                    <input type="text" name="mother" id="mother" autocomplete="off">
+                    <small></small><br>
+                </div>
+                <div class="form-field">
+                    <label for="dob">DoB:</label>
+                    <input type="date" name="dob" id="dob" autocomplete="off" value="1998-08-18" required>
+                    <small></small><br>
+                </div>
+                <div class="form-field">
+                    <label for="mobile">Mobile No:</label>
+                    <input type="tel" name="mobile" id="mobile" autocomplete="off">
+                    <small></small><br>
+                </div>
+                <div class="form-field">
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" autocomplete="off" required>
+                    <small></small><br>
+                </div>
+
+                <div class="form-field">
+                    <button type="submit" class="btn" id="submit">
+                        Next <i class="ri-arrow-right-wide-line"></i>
+                    </button>
+                    <a type="subm" class="btn" id="previous" onclick="previousPage()"
+                        style="margin-top: 15px; display: block; text-align: center; padding: 12px;">
+                        <i class="ri-arrow-left-wide-line"></i> Previous
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        // validation 
+
+        function validateForm(input,message) {
+            var fullName = document.getElementById("fullname").value;
+            var fatherName = document.getElementById("father").value
+            var motherName = document.getElementById("mother").value;
+
+            if (fullName.trim() == "") {
+                let formField = document.getElementById("form-field");
+                formField.classList.add("error");
+                
+                
+                return false;
+            }
+            else {
+                formField.classList.remove("error");
+                formField.classList.add("success");
+                return true;
+            }
+            form.addEventListener('submit', function (e) {
+                // prevent the form from submitting
+                e.preventDefault();
+                // location.replace("./qualification.html")
+            });
+        }
+
+
+        function previousPage() {
+            location.replace("./index.html")
+        };
+
+
+    </script>
+</body>
+
+</html>

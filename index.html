@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiStep Form</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-tabs">
+        <div class="container-1">
+            <div class="row">
+                <a href="index.html" style="padding: 10px 2px;">
+                    <div class="tab active">
+                        <h3>Registration</h3>
+                        <span><i class="ri-arrow-right-wide-line"></i></span>
+                    </div>
+                </a>
+                <a href="personal.html">
+                    <div class="tab">
+                        <h3>Personal Details</h3>
+                        <span><i class="ri-arrow-right-wide-line"></i></span>
+                    </div>
+                </a>
+                <a href="qualification.html">
+                    <div class="tab" >
+                        <h3>Qualification</h3>
+                        <span><i class="ri-arrow-right-wide-line"></i></span>
+                    </div>
+                </a>
+                <a href="upload.html">
+                    <div class="tab">
+                        <h3>Upload Documents</h3>
+                        <span><i class="ri-arrow-right-wide-line"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="form-box">
+    <div class="container">
+        <form action="personal.html" id="signup" class="form">
+            <h1>Register Yourself</h1>
+            <div class="form-field">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" >
+                <small></small>
+            </div>
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" autocomplete="off">
+                <small></small><br>
+            </div>
+            <div class="form-field">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
+                <small></small><br>
+            </div>
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" autocomplete="off">
+                <small></small><br>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Register" class="btn" id="submit" >
+                
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
